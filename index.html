@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCS Invoice</title>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+	<!-- CSS only -->
+	<link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+		integrity=
+"sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+		crossorigin="anonymous" rel="stylesheet">
+
+	<!-- Html2Pdf -->
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
+		integrity=
+"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
+		crossorigin="anonymous">
+	</script>
+
+	<style>
+		.heading{
+		text-align: center;
+		color: #2F8D46;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 class="heading">
+	Sun Cine Service
+	</h2>
+
+	<!-- Form encrypted as text -->
+	<form id ="form-print" enctype="text/plain" class="form-control">
+    <span>
+      <label for="name">
+      <strong>Product Name: </strong>
+      </label>
+    </span>
+    <span>
+      <input class="form-control" type="text"
+      id="name" name="Name" placeholder="Enter Name">
+    </span>
+		<br>
+
+		<label for="price">
+		<strong>Price: </strong>
+		</label>
+		<input class="form-control" type="text"
+		id="price" name="Price" placeholder="Enter Price">
+		<br>
+
+    <label for="quantity">
+      <strong>Quantity: </strong>
+      </label>
+      <input class="form-control" type="text"
+      id="quantity" name="Quantity" placeholder="Enter Quantity">
+    <br>
+
+    <label for="totalPrice">
+      <strong>Total Price: </strong>
+      </label>
+      <label class="form-control" type="text"
+      id="totalPrice" name="Total">0</label>
+    <br>
+
+		<label for="subject">
+		<strong>Product: </strong>
+		</label>
+		<select class="form-control"
+			id="subject" name="subject">
+			<option value="Web">
+				Product1
+			</option>
+			<option value="App">
+				Product2
+			</option>
+			<option value="Others">
+				Product3
+			</option>
+		</select>
+		<br>
+		
+		<!--<label for="message">
+		<strong>Enter Message </strong>
+		</label>
+		<textarea class= "form-control"
+		id="message" name="message"
+		placeholder="Enter you message"
+		style="height:100px">
+		</textarea>
+		<br>-->
+
+		<input type="button" class="btn btn-primary"
+		onclick="GeneratePdf();" value="GeneratePdf">
+	</form>
+				
+	<script src="main.js"></script>
+
+	<script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+		integrity=
+"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+		crossorigin="anonymous">
+	</script>
+</body>
+</html>
+
